@@ -13,7 +13,5 @@ Here's a summary:
 |Linking  | Static        | DLL                  | LoadLibrary       |
 |---------|---------------|----------------------|------------------
 |API code lives| In your compiled program  | In the DLL           | In the DLL        |
-|---------|---------------|----------------------|-------------------
 |Function calls | Direct, may be elided  | Indirect via table filled automatically  | Indirect via your own function parts
-|---------|---------------|----------------------|-------------------
 |Burden   | Compiler      | Compiler/OS          | You/OS
