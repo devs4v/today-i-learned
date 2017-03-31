@@ -10,12 +10,10 @@ But more relevant to DLLs, a LIB file can also be an import library. It is then 
 
 Here's a summary:
 
-Linking  ǁ Static        | DLL                  | LoadLibrary
-=========ǁ===============|======================|===================
-API code ǁ In your com-  | In the DLL           | In the DLL
-lives    ǁ piled program |                      |
----------ǁ---------------|----------------------|-------------------
-Function ǁ Direct, may   | Indirect via table   | Indirect via your
-calls    ǁ be elided     | filled automatically | own function ptrs
----------ǁ---------------|----------------------|-------------------
-Burden   ǁ Compiler      | Compiler/OS          | You/OS
+|Linking  | Static        | DLL                  | LoadLibrary       |
+|---------|---------------|----------------------|------------------
+|API code lives| In your compiled program  | In the DLL           | In the DLL        |
+|---------|---------------|----------------------|-------------------
+|Function calls | Direct, may be elided  | Indirect via table filled automatically  | Indirect via your own function parts
+|---------|---------------|----------------------|-------------------
+|Burden   | Compiler      | Compiler/OS          | You/OS
